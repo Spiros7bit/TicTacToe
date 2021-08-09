@@ -1,3 +1,8 @@
+'''
+Author: Spyros Tsioupros
+
+'''
+
 def enter_this(row, col, plaisio):
     #this function enter the inputs on the boxes (X or O)
 
