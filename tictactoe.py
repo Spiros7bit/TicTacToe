@@ -105,9 +105,6 @@ def end_game(plaisio):
     if "O" in plaisio[2][0]:
         s+=1
 
-    print("r_list: ",r_list," --- l_list: ", l_list)
-
-
     return r_list, l_list, x, s
 #end of end_game
                       
@@ -127,27 +124,37 @@ def end_game(plaisio):
 
 ###########################main program if __name__ = "__main__":
 
+player_o = input("Enter the name of player O: ")
+player_x = input("Enter the name of player X: ")
+
 
 while rounds < ROUNDS:
     if turn :
         print(player_x, " ,enter the X on a box------------------")
-        
-        while col > 3 and row > 3: 
-            row = int( input("1. Enter the row: ") )
-            col = int( input("2. Enter the column: ") )
+
+        row = int( input("1. Enter the row: ") )
+        col = int( input("2. Enter the column: ") )
             
+        while col >= 3 or row >= 3:
+            row = int( input("Wrong input, enter the row again: ") )
+            col = int( input("Wrong input, enter the column again: ") )
+
         enter_this(row, col, plaisio)
 
         turn = False
 
     else:
         print(player_o, " ,enter the O on a box------------------")
-        
-        while col > 3 and row > 3: 
-            row = int( input("1. Enter the row: ") )
-            col = int( input("2. Enter the column: ") )
+
+        row = int( input("1. Enter the row: ") )
+        col = int( input("2. Enter the column: ") )
             
+        while col >= 3 or row >= 3:
+            row = int( input("Wrong input, enter the row again: ") )
+            col = int( input("Wrong input, enter the column again: ") )
+
         enter_this(row, col, plaisio)
+
         turn = True
     
     rounds+=1
