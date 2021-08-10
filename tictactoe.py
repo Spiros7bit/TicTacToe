@@ -124,6 +124,7 @@ if __name__ == "__main__":
     player_o = input("Enter the name of player O: ")
     player_x = input("Enter the name of player X: ")
 
+    display_plaisio(plaisio)
     #there are 9 turns
     while rounds < ROUNDS:
         if turn: #playerX turn
